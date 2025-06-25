@@ -5,148 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #111;
-      color: white;
-    }
-
-    .navbar {
-      background-color: #000;
-      padding: 1rem;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .nav-links li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .section {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .about-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .flip-container {
-      perspective: 1000px;
-      width: 400px;
-      height: 500px;
-      cursor: pointer;
-    }
-
-    .flipper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-
-    .flipped .flipper {
-      transform: rotateY(180deg);
-    }
-
-    .card {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card.front {
-      background-color: #0f0c0c;
-      color: white;
-    }
-
-    .card.back {
-      background-color: rgb(239, 231, 231);
-      color: black;
-      transform: rotateY(180deg);
-    }
-
-    .profile-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .status {
-      color: lime;
-      margin: 0.5rem 0;
-    }
-
-    .icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 1rem;
-    }
-
-    .icon-img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .about-text {
-      max-width: 500px;
-    }
-
-    .about-text h2 {
-      font-size: 2rem;
-    }
-
-    .about-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-  </style>
+  
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ <!-- Navbar -->
+<header class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+<li class="dropdown">
+  <a href="#skills">Skills ▾</a>
+  <ul class="dropdown-content">
+    <li><a href="#hard-skills">Hard Skills</a></li>
+    <li><a href="#soft-skills">Soft Skills</a></li>
+  </ul>
+</li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</header>
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.14/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/dtiNVLwjShM-jQOd/scene.splinecode"></spline-viewer>
-  </section>
+
+<section id="home" class="section home-hero">
+  <div class="home-content">
+    <div class="intro-text aligned-text">
+      <h2>Hello, It's Me</h2>
+      <h1>SANJAY</h1>
+      <h3>And I'm a <span class="typing-role" id="typewriter"></span></h3>
+      <p>
+       "Welcome to my creative portfolio! Here, you'll discover a collection of my work that reflects both my technical skills and creative mindset. I'm a curious and adaptable individual, always eager to learn and grow. With a strong drive for innovation and continuous improvement, I enjoy turning ideas into impactful solutions through collaboration, thoughtful design, and meaningful development."
+
+
+      </p>
+    </div>
+
+    <div class="robot-view">
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.14/build/spline-viewer.js"></script>
+      <spline-viewer url="https://prod.spline.design/dtiNVLwjShM-jQOd/scene.splinecode"></spline-viewer>
+    </div>
+  </div>
+</section>
+
 
   <!-- About Section -->
   <section id="about">
@@ -253,10 +159,317 @@ VIT is one of India’s premier technical institutions, known for its world-clas
   </div>
 </div>
 
+  </section>
+   <!-- ============ HARD SKILLS ============ -->
+<section id="hard-skills" class="section skills-section">
+<h2 class="section-title emoji-pointer">HARD SKILLS</h2>
+
+  <div class="skills-grid">
+    <!-- 1 -->
+    <div class="skill-card">
+      <h3>HTML5</h3>
+      <p>Semantic markup for modern structure</p>
+      <div class="skill-icon white-bg">
+        <!-- HTML5 SVG -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <path fill="#000"
+            d="M19.7 0h88.6l-8 106.3L64 128 27.7 106.3 19.7 0z"/>
+          <path fill="#000" opacity=".15"
+            d="M64 117.2l28.9-12 6.8-96H64v108z"/>
+          <text x="64" y="88" text-anchor="middle"
+            font-size="70" font-family="'Arial Black',Arial,Helvetica,sans-serif"
+            font-weight="900" fill="#fff">5</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="skill-card">
+      <h3>CSS3</h3>
+      <p>Styling with animations &amp; transitions</p>
+      <div class="skill-icon white-bg">
+        <!-- CSS3 SVG -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <path fill="#000" d="M19 0h90l-8 107.6L64 128 27 107.6z"/>
+          <text x="64" y="92" text-anchor="middle"
+            font-size="70" font-family="'Arial Black',Arial"
+            font-weight="900" fill="#fff">3</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="skill-card">
+      <h3>JavaScript</h3>
+      <p>Interactive &amp; dynamic functionality</p>
+      <div class="skill-icon white-bg">
+        <!-- JS SVG -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <rect width="128" height="128" rx="15" ry="15" fill="#000"/>
+          <text x="64" y="88" text-anchor="middle"
+            font-size="60" font-family="'Arial Black',Arial"
+            font-weight="900" fill="#fff">JS</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="skill-card">
+      <h3>Java</h3>
+      <p>Object-oriented, portable, secure, robust.</p>
+      <div class="skill-icon white-bg">
+        <!-- Java SVG -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <path d="M34 72c0 17 13 30 30 30s30-13 30-30H34z" fill="#000"/>
+          <path d="M98 56a12 12 0 0 1 0 24"
+            fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+          <path d="M54 42c6-6 0-10 0-10m20 10c6-6 0-10 0-10"
+            fill="none" stroke="#000" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="skill-card">
+      <h3>Database</h3>
+      <p>Organized digital data storage</p>
+      <div class="skill-icon white-bg">
+        <!-- DB SVG -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <ellipse cx="64" cy="32" rx="40" ry="18" fill="#000"/>
+          <rect x="24" y="32" width="80" height="64" fill="#000"/>
+          <ellipse cx="64" cy="96" rx="40" ry="18" fill="#000"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="skill-card">
+      <h3>DSA</h3>
+      <p>Problem-solving with data logic</p>
+      <div class="skill-icon white-bg">
+        <!-- DSA SVG -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <rect x="28" y="24" width="72" height="22" fill="#000"/>
+          <rect x="28" y="53" width="72" height="22" fill="#000"/>
+          <rect x="28" y="82" width="72" height="22" fill="#000"/>
+        </svg>
+      </div>
+    </div>
+  </div>
 </section>
-  <section id="projects" class="section"><h2>Projects</h2></section>
-  <section id="skills" class="section"><h2>Skills</h2></section>
-  <section id="contact" class="section"><h2>Contact</h2></section>
+
+<!-- ============ SOFT SKILLS ============ -->
+<!-- ============ SOFT SKILLS ============ -->
+<section id="soft-skills" class="section skills-section">
+  <h2 class="section-title emoji-pointer">Soft Skills</h2>
+
+  <!-- use the SAME .skills-grid & .skill-card classes -->
+  <div class="skills-grid">
+    <!-- Team Collaboration -->
+    <div class="skill-card">
+      <h3>Teamwork</h3>
+      <p>Collaborative project delivery</p>
+      <div class="skill-icon white-bg">
+        <!-- two-person SVG -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <circle cx="42" cy="46" r="20" fill="#000"/>
+          <circle cx="86" cy="46" r="20" fill="#000"/>
+          <rect x="22" y="70" width="84" height="30" rx="12" fill="#000"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Communication -->
+    <div class="skill-card">
+      <h3>Communication</h3>
+      <p>Clear &amp; concise exchange</p>
+      <div class="skill-icon white-bg">
+        <svg viewBox="0 0 128 128"><path d="M16 24h96v56H68l-20 20v-20H16z" fill="#000"/></svg>
+      </div>
+    </div>
+
+    <!-- Problem Solving -->
+    <div class="skill-card">
+      <h3>Problem&nbsp;Solving</h3>
+      <p>Logical, creative solutions</p>
+      <div class="skill-icon white-bg">
+        <svg viewBox="0 0 128 128"><path d="M64 12l10 28h30L79 64l11 28-26-18-26 18 11-28L24 40h30z" fill="#000"/></svg>
+      </div>
+    </div>
+
+    <!-- Adaptability -->
+    <div class="skill-card">
+      <h3>Adaptability</h3>
+      <p>Thrives in changing scope</p>
+      <div class="skill-icon white-bg">
+        <svg viewBox="0 0 128 128">
+          <path d="M64 18a46 46 0 1 0 46 46" stroke="#000" stroke-width="12" fill="none"/>
+          <polyline points="82 14 110 18 106 46" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Critical Thinking -->
+    <div class="skill-card">
+      <h3>Critical&nbsp;Thinking</h3>
+      <p>Evidence-based decisions</p>
+      <div class="skill-icon white-bg">
+        <svg viewBox="0 0 128 128">
+          <path d="M64 20a30 30 0 0 1 0 60v18" stroke="#000" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <circle cx="64" cy="98" r="6" fill="#000"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Time Management -->
+    <div class="skill-card">
+      <h3>Time&nbsp;Management</h3>
+      <p>Prioritizes &amp; meets deadlines</p>
+      <div class="skill-icon white-bg">
+        <svg viewBox="0 0 128 128">
+          <circle cx="64" cy="64" r="40" fill="#000"/>
+          <rect x="60" y="38" width="8" height="30" fill="#fff"/>
+          <rect x="64" y="64" width="22" height="8" fill="#fff" transform="rotate(30 64 64)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br><br>
+<!-- ============ CONTACT (unchanged) ============ -->
+
+
+<!-- contact.html -->
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-left">
+      <h2>📩 Contact <span>Me!!</span></h2>
+      <p>
+Got something in mind? Whether it's work, feedback, or just a hello — I'm all ears! I promise to reply shortly.      </p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="icon-box">
+            <a href="https://mail.google.com/mail/u/0/#inbox"><img src="https://img.icons8.com/ios-filled/24/ffffff/new-post.png" alt="email icon" />
+            </a>       </div>
+          <div>
+            <div class="label">Email</div>
+            <div>sanjaygs2406@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/phone.png" alt="phone icon" />
+          </div>
+          <div>
+            <div class="label">Phone</div>
+            <div>+91 6382041873</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box">
+            <a href="https://www.google.com/maps/place/Erode,+Tamil+Nadu/@11.3466261,77.7153969,13z/data=!3m1!4b1!4m6!3m5!1s0x3ba96f46762f4671:0xd97da6e3d9c7f75e!8m2!3d11.3410364!4d77.7171642!16zL20vMDQ3N2hk?entry=ttu&g_ep=EgoyMDI1MDYyMy4wIKXMDSoASAFQAw%3D%3D"><img src="https://img.icons8.com/ios-filled/24/ffffff/marker.png" alt="location icon" />
+            </a></div>
+          <div>
+            <div class="label">Location</div>
+            <div>Erode, Tamil Nadu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      
+    <form action="https://formspree.io/f/xdkzpgpz" method="POST" class="contact-form">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+<textarea name="message" placeholder="Your Message" rows="6" cols="50" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+    </div>
+  </div>
+</section>
+<!-- Footer Section -->
+<footer class="footer">
+  <p style="color: white;">
+  <span style="color: white;">©</span> 2025 Sanjay S 🛡️ | All Rights Reserved🔒
+</p>
+
+</footer>
+
+<!-- Scroll to Top Button -->
+<a href="#home" class="scroll-top" title="Back to Top">↑</a>
+
+  <script>
+
+
+  const roles = ["STUDENT", "WEB DEVELOPER", "TECH ENTHUSIAST"];
+  let i = 0;
+  let j = 0;
+  let currentRole = "";
+  let isDeleting = false;
+  const speed = 150;
+  const pause = 1200;
+
+  function typeEffect() {
+    const typewriter = document.getElementById("typewriter");
+
+    if (i < roles.length) {
+      if (!isDeleting && j <= roles[i].length) {
+        currentRole = roles[i].substring(0, j++);
+        typewriter.textContent = currentRole;
+        setTimeout(typeEffect, speed);
+      } else if (isDeleting && j >= 0) {
+        currentRole = roles[i].substring(0, j--);
+        typewriter.textContent = currentRole;
+        setTimeout(typeEffect, speed / 2);
+      } else if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(typeEffect, pause);
+      } else {
+        isDeleting = false;
+        j = 0;
+        i = (i + 1) % roles.length;
+        setTimeout(typeEffect, speed);
+      }
+    }
+  }
+
+  window.onload = typeEffect;
+    
+
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggleBtn.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+  
+  const dropdownAnchor = document.querySelector('.dropdown > a');
+  const dropdownMenu   = document.querySelector('.dropdown-content');
+
+  dropdownAnchor.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {         // only on mobile / tablet
+      e.preventDefault();                   // stop instant jump
+      dropdownMenu.classList.toggle('show');
+    }
+  });
+
+</script>
+
 
 </body>
 </html>
