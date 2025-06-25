@@ -1,0 +1,454 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(to right, #000, #444);
+  padding: 20px 0;
+  z-index: 999;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  color: #00ffcc;
+}
+
+/* Sections */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+/* About Section */
+.about-section {
+  min-height: 100vh;
+  padding: 140px 20px 100px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background: #111;
+}
+
+.about-card-container {
+  align-self: center;
+}
+
+.profile-card {
+  background: #000;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 320px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.status {
+  color: #0f0;
+  margin-bottom: 5px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: limegreen;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.icon-img {
+  height: 40px;
+  width: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #eef3f2;
+}
+
+.profile-card h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.profile-card p {
+  font-size: 14px;
+  margin: 5px 0 15px;
+}
+
+.icons i {
+  margin: 0 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* adds space between icons */
+  margin: 20px 0;
+}
+
+.icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icons a:hover img {
+  transform: scale(1.1);
+}
+.icons i {
+  margin: 0 10px; /* horizontal spacing */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icons i:hover {
+  transform: scale(1.1);
+}
+
+
+.contact-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 60px 40px;
+  padding-top: 150px;
+  padding-bottom: 0px;
+  max-width: 1200px;
+margin-left: 0px;
+}
+
+/* Larger profile card */
+.profile-card {
+  background-color: #000;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  width: 400px; /* increased width */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 6000px;
+  padding left: 2200px;
+  padding right:0px;
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size:4rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line: height 2em;
+}
+
+.card {
+  background-color: #000; /* Original dark background */
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effect */
+.card:hover {
+  background-color: white;
+  color: black; /* Text changes to black for visibility */
+}
+
+/* Ensure text and elements adjust color if needed */
+.card:hover .available,
+.card:hover .icons a,
+.card:hover .card-name,
+.card:hover .card-role {
+  color: black;
+}
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.edu-card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.edu-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.edu-card:hover .edu-inner {
+  transform: rotateY(180deg);
+}
+
+.edu-front, .edu-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.edu-front {
+  background-color: #222;
+  color: white;
+}
+
+.edu-back {
+  background-color: #f4f4f4;
+  color: #111;
+  transform: rotateY(180deg);
+}
+
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.edu-card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.edu-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.edu-card:hover .edu-inner {
+  transform: rotateY(180deg);
+}
+
+.edu-front,
+.edu-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.edu-front {
+  background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.edu-front h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.edu-front p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.edu-back {
+  background-color: #f9f9f9;
+  color: #111;
+  transform: rotateY(180deg);
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.edu-back {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.edu-card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.edu-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  letter-spacing: 1px;
+  font-weight: bolder;
+}
+
+.edu-card:hover .edu-inner {
+  transform: rotateY(180deg);
+}
+
+.edu-front, .edu-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* default */
+}
+
+.edu-back {
+  background: white;
+  color: black;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.edu-back {
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+  color: black;
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.box1 {
+  background-image: url('Screenshot\ 2025-06-08\ 155918.png');
+}
+
+.box2 {
+  background-image: url('Screenshot\ 2025-06-08\ 160505.png');
+}
+
+.box3 {
+  background-image: url('/mnt/data/image3.png');
+}
+
+/* Optional overlay for readability */
+.edu-back::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 120%;
+  background-color: rgba(255, 255, 255, 0.85); /* white overlay */
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.edu-back > * {
+  position: relative;
+  z-index: 1;
+}
