@@ -1505,3 +1505,233 @@ body {
     text-align: center;
   }
 }
+
+/* --- Fix edu-card height for mobile so content is not hidden --- */
+@media (max-width: 600px) {
+  .edu-card {
+    height: auto !important;
+    min-height: 320px !important;
+    max-height: none !important;
+  }
+  .edu-front,
+  .edu-back {
+    min-height: 320px !important;
+    height: auto !important;
+    padding: 1.2rem !important;
+    font-size: 1rem !important;
+    overflow-y: visible !important;
+  }
+  .edu-back {
+    max-height: none !important;
+  }
+}
+
+/* Make edu-card and edu-back auto height on all screens, especially mobile */
+.edu-card,
+.edu-inner,
+.edu-front,
+.edu-back {
+  height: auto !important;
+  min-height: 340px !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+}
+
+/* For extra safety, on mobile make min-height larger */
+@media (max-width: 600px) {
+  .edu-card,
+  .edu-inner,
+  .edu-front,
+  .edu-back {
+    min-height: 420px !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+}
+
+/* Adjust when nav is open */
+.nav-links.open {
+  position: absolute;
+  top: 60px; /* adjust based on your navbar height */
+  left: 0;
+  width: 100%;
+  background: black;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+/* Push content down when nav is open on small screens */
+body.nav-open .home-hero {
+  margin-top: 300px; /* you can tweak this based on height of the nav */
+}
+
+
+.contact-item a {
+  transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+  transform: translateX(5px);
+  color: #00ffff; /* Cyan text on hover */
+}
+
+.contact-item a:hover .icon-box img {
+  filter: drop-shadow(0 0 6px #00ffff);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.contact-item:hover {
+  background-color: rgba(0, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+/* Add this to your style.css for a more attractive "Visit Site" button */
+.visit-site-link {
+  display: inline-block;
+  background: linear-gradient(90deg, #00fff0 0%, #007cf0 100%);
+  color: #181818 !important;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 28px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.08rem;
+  box-shadow: 0 4px 18px 0 rgba(0,255,255,0.18), 0 1.5px 8px 0 rgba(0,255,255,0.10);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.visit-site-link::before {
+  content: "🌐";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.visit-site-link:hover {
+  background: linear-gradient(90deg, #007cf0 0%, #00fff0 100%);
+  color: #fff !important;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 32px 0 rgba(0,255,255,0.28), 0 2px 12px 0 rgba(0,255,255,0.18);
+  text-decoration: underline;
+}
+/* Add to your style.css for a more attractive "View Code" button */
+.view-code-link {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffefba 0%, #ffffff 100%);
+  color: #222 !important;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 28px 12px 38px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.08rem;
+  box-shadow: 0 4px 18px 0 rgba(255,239,186,0.18), 0 1.5px 8px 0 rgba(255,239,186,0.10);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-code-link .emoji {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.view-code-link:hover {
+  background: linear-gradient(90deg, #ffffff 0%, #ffefba 100%);
+  color: #007cf0 !important;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 32px 0 rgba(255,239,186,0.28), 0 2px 12px 0 rgba(255,239,186,0.18);
+  text-decoration: underline;
+}
+
+/* Responsive: Make buttons full width on mobile for easy tap */
+@media (max-width: 600px) {
+  .view-code-link,
+  .visit-site-link {
+    display: block;
+    width: 95vw !important;
+    max-width: 95vw !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.08rem;
+    padding-left: 38px;
+    padding-right: 18px;
+  }
+}
+
+
+.project-links-container {
+  display: flex;             /* Enables flexbox for its children */
+  flex-direction: column;    /* Stacks the buttons vertically */
+  gap: 15px;                 /* <--- THIS CONTROLS THE SPACE BETWEEN THE BUTTONS */
+                             /* Adjust this value (e.g., 10px, 20px) to your preference */
+  align-items: center;       /* Centers the buttons horizontally within the container */
+  max-width: 250px;          /* Example: Adjust this for the overall container width */
+  margin: 20px;              /* Example: Add some margin if needed */
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;        /* Adjust padding to control button size */
+  border-radius: 9999px;     /* For pill shape */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;           /* Adjust font size as needed */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Initial backshadow */
+  width: 180px;              /* Fixed width for both buttons to ensure same size */
+  box-sizing: border-box;    /* Include padding and border in the width */
+}
+
+.project-link .emoji {
+  margin-right: 8px; /* Space between emoji and text */
+  font-size: 18px;   /* Adjust emoji size */
+}
+
+/* View Code Button */
+.view-code-link {
+  background: linear-gradient(to right, #f0f4f8, #e0e8f0); /* Light gradient */
+  color: #333;
+}
+
+.view-code-link:hover {
+  background: linear-gradient(to right, #e0e8f0, #d0d8e0); /* Slightly darker on hover */
+  color: #000;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Visit Site Button */
+.visit-site-link {
+  background: linear-gradient(to right, #56CCF2, #2F80ED); /* Blue gradient */
+  color: #fff;
+}
+
+.visit-site-link:hover {
+  background: linear-gradient(to right, #2F80ED, #56CCF2); /* Reversed gradient on hover */
+  color: #fff;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
